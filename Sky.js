@@ -1,18 +1,36 @@
-
-  function makeRequest(url, callback) {
-    fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      return callback(null, data)
-    })
-    .catch(function(error) {
-      callback(error)
-    })
-  }
+function makeRequest(url, callback) {
+  fetch(url)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    return callback(null, data)
+  })
+  .catch(function(error) {
+    callback(error)
+  })
+}
+//make one makerequest function
+function makeRequestV2(url, callback) {
+  fetch(url, {
+    "method": "GET",
+    "headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "03eca7d594msh34ef155af2e0855p1c1bc1jsnc83e871ff4b9"
+	}})
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    return callback(null, data)
+  })
+  .catch(function(error) {
+    callback(error)
+  })
+}
 
 var currPicNum = 0;
+var lastQuery = "";
 var firstDes = document.querySelector(".first_des");
 var secondDes = document.querySelector(".second_des");
 var thirdDes = document.querySelector(".third_des");
@@ -27,6 +45,8 @@ var thirdTitle = document.querySelector(".third_title");
  
 function changePic(n){
     var searchQuery = document.getElementById("search-box").value;
+    if(searchQuery !== lastQuery) currPicNum = 0;
+    lastQuery = searchQuery;
     if(!searchQuery){
         alert("Enter a search Keyword")
         return false;
@@ -42,8 +62,15 @@ function changePic(n){
 
             var dataColl = data.collection;
             currPicNum += n;
+            console.log(currPicNum)
+        
 
             if(currPicNum < 0) currPicNum = 0;
+            if(currPicNum > dataColl.items.length) {
+              alert("Exceeded pictures for this search")
+              currPicNum -=n;
+              return false;
+            }
             if(data.collection.items.length < 3) {
                 alert("No results were found, please try another keyword e.g Earth");
                 return false;
@@ -62,6 +89,11 @@ function changePic(n){
     })
 }
 
+document.addEventListener("keydown", toggleSearch);
+function toggleSearch() {
+  if(event.keyCode == 13) changePic(3);
+}
+
 function toggleText(desNum) {
   var str;
   if(desNum == 1) str = ".first_des"
@@ -76,5 +108,16 @@ function toggleText(desNum) {
 }
 
 
-//fixes: if reached end of items in collection
-//reset the picnum after a new search
+
+function playSong(){
+  var searchQuery = document.getElementById("search-box").value;
+  makeRequestV2("https://deezerdevs-deezer.p.rapidapi.com/search?q="+searchQuery, 
+        function(error, data){
+            if (error) {
+                console.log(error)
+                console.log('an error happened show me the error')
+                return false;
+            }   
+            window.open(data.data[0].link, '_blank');
+    })
+}
