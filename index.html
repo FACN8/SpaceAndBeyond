@@ -10,16 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Sky And Beyond</title>
+    <title>Sky And Beyond</title>earth
 </head>
 
-<body>
+<body onload="changePic(3)">
     <nav class="nav-bar">
 
         <div class="bar">
-
-
-
             <div class="list">
                 <div class="logo">
                     <img src="Final-logo.png" alt="">
@@ -29,39 +26,54 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-
+                earthearth
                 <div class="search-border-div">
                     <i class="fa fa-search"></i>
-                    <input id="search-box" type="text" placeholder="Search">
+                    <input id="search-box" type="text" value="earth" placeholder="Search">
                 </div>
             </div>
         </div>
     </nav>
 
 
+
+
     <section id="carousel">
-        
-        <div class="myPics">
-            <h2 class = "first_title"></h2>
-            <img class="first_pic" src="#" onclick="toggleText(1)">
-            <p class="first_des" style='display: none'></p>
-          </div>
-        
-          <div class="myPics">
-            <h2 class = "second_title"></h2>
-            <img class="second_pic" src="#" onclick="toggleText(2)">
-            <p class="second_des" style='display: none'></p>
-          </div>
-        
-          <div class="myPics">
-            <h2 class = "third_title"></h2>
-            <img class="third_pic" src="#" onclick="toggleText(3)">
-            <p class="third_des" style='display: none'></p>
-          </div>
-        
-          <a style="font-size: 50px;" class="next" onclick="changePic(3)">></a>
-          
-          <a style="font-size: 50px;" class="previous" onclick="changePic(-3)"><</a>
+
+        <div class="carousel-div">
+
+            <div class="nextButton">
+                <a style="font-size: 50px;" class="next" onclick="changePic(3)">
+                    <i class="fa fa-chevron-circle-left"></i>
+                </a>
+            </div>
+
+            <div class="myPics">
+                <h2 class="first_title"></h2>
+                <img class="first_pic" src="#" onclick="toggleText(1)">
+                <p class="first_des" style='display: none'></p>
+            </div>
+
+            <div class="myPics">
+                <h2 class="second_title"></h2>
+                <img class="second_pic" src="#" onclick="toggleText(2)">
+                <p class="second_des" style='display: none'></p>
+            </div>
+
+            <div class="myPics">
+                <h2 class="third_title"></h2>
+                <img class="third_pic" src="#" onclick="toggleText(3)">
+                <p class="third_des" style='display: none'></p>
+            </div>
+
+            <div class="prevButton">
+                <a style="font-size: 50px;" class="previous" onclick="changePic(-3)">
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </div>
+
+
+        </div>
 
     </section>
 
