@@ -39,8 +39,30 @@
     </nav>
 
 
-    <section class="carousel">
-        <h2>Carousel</h2>
+    <section id="carousel">
+        
+        <div class="myPics">
+            <h2 class = "first_title"></h2>
+            <img class="first_pic" src="#" onclick="toggleText(1)">
+            <p class="first_des" style='display: none'></p>
+          </div>
+        
+          <div class="myPics">
+            <h2 class = "second_title"></h2>
+            <img class="second_pic" src="#" onclick="toggleText(2)">
+            <p class="second_des" style='display: none'></p>
+          </div>
+        
+          <div class="myPics">
+            <h2 class = "third_title"></h2>
+            <img class="third_pic" src="#" onclick="toggleText(3)">
+            <p class="third_des" style='display: none'></p>
+          </div>
+        
+          <a style="font-size: 50px;" class="next" onclick="changePic(3)">></a>
+          
+          <a style="font-size: 50px;" class="previous" onclick="changePic(-3)"><</a>
+
     </section>
 
     <section class="about">
