@@ -52,7 +52,6 @@ ul a {
 }
 
 .search-border-div {
-    position: relative;
     right: 0;
     top: -35px;
     color: #DADBD2;
@@ -133,21 +132,23 @@ section {
 
 /*---About Section---*/
 
-.about {
+#about {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
-.about h2 {
+#about h2 {
     font-size: 40px;
 }
 
-.about p {
+#about p {
+    margin: 0 auto;
     text-align: start;
     letter-spacing: 2px;
     color: #DADBD2;
-    font-size: 19px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 40px;
+    max-width: 90%;
     padding: 5px;
     font-weight: bold;
 }
@@ -155,16 +156,17 @@ section {
 
 /*---Contact Section---*/
 
-.contact {
+#contact {
+    margin-top: 400px;
     text-align: center;
 }
 
-.contact h3 {
+#contact h3 {
     font-weight: bold;
     letter-spacing: 15px;
 }
 
-.contact a {
+#contact a {
     text-decoration: none;
     color: #B5747E;
 }
