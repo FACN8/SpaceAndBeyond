@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(pexels-photo-1537611.jpeg);
+    background-image: url(../images/background.jpeg);
     background-size: 100%;
     font-family: 'Comfortaa', cursive;
 }
@@ -80,8 +80,10 @@ section {
 
 .nextButton,
 .prevButton {
+   
     color: #C7C7C5;
-    align-self: center;
+    display:inline-block;
+    margin-top: 250px;
 }
 
 .carousel-div {
@@ -89,7 +91,7 @@ section {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    margin-bottom: auto;
+    
 }
 
 @keyframes fade-pic {
@@ -134,7 +136,7 @@ section {
 
 #about {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 #about h2 {
