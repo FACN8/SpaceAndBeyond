@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sky.css">
+
 </head>
 <body>
-    <div id="first">HELLO</div>
+    <nav class="nav-bar">
+        <div class="bar">
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li id="search-border"><i class="fa fa-search"></i>
+        <input id="search-box" type="text" placeholder="Search"></li>
+        </ul>
+        </div>
+        
+        </nav>
+        
+
+    <section id="carousel">
+        
+        <div class="myPics">
+            <h2 class = "first_title"></h2>
+            <img class="first_pic" src="#" onclick="toggleText(1)">
+            <p class="first_des" style='display: none'></p>
+          </div>
+        
+          <div class="myPics">
+            <h2 class = "second_title"></h2>
+            <img class="second_pic" src="#" onclick="toggleText(2)">
+            <p class="second_des" style='display: none'></p>
+          </div>
+        
+          <div class="myPics">
+            <h2 class = "third_title"></h2>
+            <img class="third_pic" src="#" onclick="toggleText(3)">
+            <p class="third_des" style='display: none'></p>
+          </div>
+        
+          <a style="font-size: 50px;" class="next" onclick="changePic(3)">></a>
+          
+          <a style="font-size: 50px;" class="previous" onclick="changePic(-3)"><</a>
+
+    </section>
+
+    <section>About</section>
+
+    <section>Contact</section>
     
+
     <script src="Sky.js"></script>
 </body>
 </html>
