@@ -29,7 +29,7 @@ function makeRequestV2(url, callback) {
   })
 }
 
-var currPicNum = 0;
+var currPicNum = 3;
 var lastQuery = "";
 var firstDes = document.querySelector(".first_des");
 var secondDes = document.querySelector(".second_des");
@@ -49,7 +49,7 @@ function changePic(n) {
     if(!searchQuery){
         alert("Enter a search Keyword")
         return false;
-    }
+    }  
     firstPic.style.animation = " ";
     makeRequest("https://images-api.nasa.gov/search?q=" + searchQuery,
         function(error, data) {
@@ -66,7 +66,7 @@ function changePic(n) {
             console.log(currPicNum)
         
 
-            if(currPicNum < 0) currPicNum = 0;
+            if(currPicNum <= 0) currPicNum = 3;
             if(currPicNum > dataColl.items.length) {
               alert("Exceeded pictures for this search")
               currPicNum -=n;
