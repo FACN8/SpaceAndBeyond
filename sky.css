@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(pexels-photo-1537611.jpeg);
+    background-size: 100%;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+/*---Navigation Bar Styling---*/
+
+.nav-bar {
+    margin: 10px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+}
+
+ul {
+    display: flex;
+    text-align: center;
+    margin-right: 47%;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+ul a {
+    text-decoration: none;
+    color: #DADBD2;
+}
+
+#search-border {
+    color: #DADBD2;
+}
+
+.search-border-div {
+    position: relative;
+    right: 0;
+    top: -35px;
+    color: #DADBD2;
+    margin-right: 15px;
+}
+
+#search-box {
+    background: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(231, 229, 224);
+    font-size: 18px;
+    padding: 5px;
+}
+
+
+/*---Sections---*/
+
+section {
+    margin: 5px;
+    color: #B5747E;
+}
+
+.carousel {
+    border: 3px solid;
+    text-align: center;
+}
+
+
+/*---About Section---*/
+
+.about {
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 40px;
+}
+
+.about p {
+    text-align: start;
+    letter-spacing: 2px;
+    color: #DADBD2;
+    font-size: 19px;
+    line-height: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+/*---Contact Section---*/
+
+.contact {
+    text-align: center;
+}
+
+.contact h3 {
+    font-weight: bold;
+    letter-spacing: 15px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #B5747E;
+}
+
+.team {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0 100px 0;
+}
